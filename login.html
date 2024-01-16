@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Gadis Melayu Songs Collection </title> 
+<style>
+body {
+    background-image:url("bg_gm.jpg");
+    background-size: contain;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+h2 {
+    text-align: center;
+    background-color: white;
+	padding: 5px;
+	border-radius: 26px;
+	margin-bottom: 30px;
+	}
+	
+form {
+    background-color:white;
+    padding: 20px;
+    border-radius: 26px;
+    text-align: center;
+    }
+	
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 50%; /* Adjust the width as needed */
+    font-size: 14px;
+    }
+
+input[type="reset"],
+input[type="submit"] {
+    background-color:#a86662;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
+</style>
+<script>
+window.onload = function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var userID = urlParams.get('userID');
+  if (userID) {
+    document.forms["loginForm"]["userID"].value = userID;
+  }
+};
+</script>
+</head>
+<center>
+<body>
+<h2> 🎶 Gadis Melayu Songs Collection 🎶 </h2>
+<h3>Enter your user ID & Password </h3>
+<br>
+<form name="loginForm" action="loginVerify.php" method="post">
+User ID  <input type ="text" name="userID" maxlength="10" required >
+<span style="color:#a86662;"> ♫ </span>
+<br><br>
+Password  <input type ="password" name="userPwd" required >
+<span style="color:#a86662;"> ♫ </span>
+<br><br>
+<i>field with <span style="color:#a86662;"> ♫ </span> is compulsory </i>
+<br><br>
+<input type="reset" value="↺ Reset">
+<input type="submit" value="▷ Log In">
+</form>
+</center>
+</body>
+</html>
